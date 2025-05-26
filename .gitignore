@@ -1,0 +1,13 @@
+# input files
+.txt
+
+# img files
+.png
+.excalidraw.png
+# test files
+test.py
+
+# exe
+.exe
+tempCodeRunnerFile.cpp
+.vscode
