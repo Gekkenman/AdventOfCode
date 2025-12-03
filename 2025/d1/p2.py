@@ -1,27 +1,23 @@
 def main():
-    with open("example1.txt", "r") as f:
+    with open("input.txt", "r") as f:
         score = 0
         cur = 50
+        skip = False
         for line in f:
             rotation = line[:1]
             amount = int(line[1:].strip())
             score += amount // 100
             amount %= 100
-
-            # print(f"{cur} Score: {score}")
+            if cur == 0:
+                skip = True
             if rotation == "L":
-                print(f"From: {cur} - {amount} = ", end="")
                 cur -= amount
-                print(cur % 100, end="")
             elif rotation == "R":
-                print(f"From: {cur} + {amount} = ", end="")
                 cur += amount
-                print(cur % 100, end="")
-            if cur != cur % 100:
+            if not skip and cur != cur % 100 or cur == 0:
                 score += 1
-                print(" Score: +1")
             else:
-                print()
+                skip = False
             cur = cur % 100
         print(score)
     return

@@ -7,7 +7,7 @@ with open("input.txt", "r") as f:
         row2.append(int(line[1]))
 row1.sort()
 row2.sort()
-result = 0 
+result = 0
 for r1, r2 in zip(row1, row2):
    result += abs(r2 - r1)
 print(result) 
