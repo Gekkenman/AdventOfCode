@@ -25,7 +25,7 @@ def main():
                     continue
                 break
 
-    # can be done bether with min-heap than you don't need the sort in the end
+    # can be done bether with min-heap soted on node y (pos[0]) than you don't need the sort in the end
     q = [head]
 
     while q:
